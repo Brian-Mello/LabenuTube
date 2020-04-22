@@ -17,7 +17,9 @@ Por ser um projeto com ReactJS, há a necessidade do NodeJS. Com ele em sua máq
 
 ## Dados de um usuário já criado para testar o Front-end
 link para acessar o LabenuTube: http://labenutube.s3-website-us-east-1.amazonaws.com/
+
 login: admin3@gmail.com
+
 senha: 123456
 
 ## Contato
