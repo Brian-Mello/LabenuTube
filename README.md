@@ -23,8 +23,10 @@ login: admin3@gmail.com
 senha: 123456
 
 ## Contato
-Brian de Paula Mello
+Nome: Brian de Paula Mello
 
-brianmmello@gmail.com
+Linkedin: https://www.linkedin.com/in/brian-de-paula-mello-6b8577161/
 
-(21) 98268-1935
+Email: brianmmello@gmail.com
+
+Celular: (21) 98268-1935
