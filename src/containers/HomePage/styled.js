@@ -94,11 +94,13 @@ export const FeedOrderSelectContainer = styled.div `
 
 export const StyledP = styled.p `
     width: 100%;
-    height: 20px;
+    height: 30px;
     margin: 0;
-    border-bottom: 1px solid #c4c4be;
     margin-bottom: 5px;
     font-weight: 700px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     :hover{
         cursor: pointer;
         background-color: #c4c4be;

@@ -5,7 +5,6 @@ import { routes } from '../containers/Router';
 
 const baseUrl = "https://vj4kbpy8c0.execute-api.us-east-1.amazonaws.com/v1"
 
-// const baseUrl = "http://localhost:3003"
 // Video Actions
 
 export const setFeed = (feed) => ({
@@ -15,7 +14,6 @@ export const setFeed = (feed) => ({
     }
 }) 
 
-// pegar todos videos
 export const getVideos = () => async (dispatch) => {
     try {
         const response = await axios.get(`${baseUrl}/feed`)
@@ -33,7 +31,6 @@ export const setVideoId = (videoId) => ({
     }
 })
 
-// criar um video
 export const createVideo = (title, link, description, photo) => async (dispatch) => {
    
     const newVideo = {
@@ -84,7 +81,6 @@ export const updateVideo = (videoId, title, description) => async (dispatch) => 
     }
 }
 
-// deletar um video
 export const deleteVideo = (videoId) => async (dispatch) => {
 
     const accessToken = window.localStorage.getItem("accessToken")
@@ -113,7 +109,6 @@ export const setVideoDetail = (videoDetail) => ({
     }
 })
 
-// pegar detalhes de um video
 export const getVideoDetails = (videoId) => async (dispatch) => {
     try{
         const response = await axios.get (`${baseUrl}/getVideoDetail/${videoId}`)
@@ -124,8 +119,6 @@ export const getVideoDetails = (videoId) => async (dispatch) => {
     }
 }
 
-// user actions
-
 export const setUserId = (userId) => ({
     type: "SET_USER_ID",
     payload: {
@@ -133,7 +126,6 @@ export const setUserId = (userId) => ({
     }
 })
 
-// Atualiza a senha do usuário logado.
 export const updatePassword = (oldPassword, newPassword) => async (dispatch) => {
     
     const updatePassword = {
@@ -158,7 +150,6 @@ export const updatePassword = (oldPassword, newPassword) => async (dispatch) => 
     }
 }
 
-// logar na conta
 export const login = (email, password, device) => async (dispatch) => {
 
     const login = {
@@ -172,13 +163,11 @@ export const login = (email, password, device) => async (dispatch) => {
             
         window.localStorage.setItem("accessToken", response.data.accessToken)
         dispatch(push(routes.home))
-        window.alert("Usuário logado com sucesso!")
     } catch (error) {
         window.alert("Usuário ou senha inválidos")
     }
 }
 
-// criar uma nova conta
 export const signup = (name, birthdate, email, password, type, photo) => async (dispatch) =>{
     const signUp = {
         name,
@@ -206,7 +195,6 @@ export const setProfile = (User) => ({
     }
 })
 
-// pega o perfil de um usuário
 export const getProfile = () => async (dispatch) => {
 
     const accessToken = window.localStorage.getItem("accessToken")

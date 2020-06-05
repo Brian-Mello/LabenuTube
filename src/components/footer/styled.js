@@ -15,5 +15,6 @@ export const StyledFooter = styled.footer `
 export const StyledCopyright = styled.p `
     margin: 0;
     padding: 0;
+    font-size: 12px;
     margin-bottom: 5px;
 `

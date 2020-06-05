@@ -23,6 +23,7 @@ export const StyledLogo = styled.img `
     width: 160px;
     height: 100%;
     margin: 0;
+    transition: opacity 0.5s;
     :hover {
         cursor: pointer;
         opacity: 80%;
@@ -99,11 +100,13 @@ export const StyledButton = styled.button `
     background-color: #3c0000;
     border-radius: 5px;
     color: white;
+    font-weight: 400px;
     font-family: 'Manrope', sans-serif;
+    transition: all 0.5s;
     :hover {
         cursor: pointer;
         background-color: white;
-        border: 1px solid #3c0000;
+        font-weight: bold;
         color: #3c0000;
     }
     @media(max-width: 700px){

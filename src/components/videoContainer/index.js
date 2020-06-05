@@ -10,7 +10,7 @@ function VideoContainer (props) {
     if(isLogged){
         deleteIcon = (
             <DeleteContainer>
-                <TrashIcon onClick={props.onDelete}/>
+                {props.onDelete && <TrashIcon onClick={props.onDelete}/>}
             </DeleteContainer>
         )
     }

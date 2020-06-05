@@ -94,7 +94,7 @@ export class VideoDetailPage extends React.Component {
             )
         } else {
             buttonRenderization = (
-                <Header onClick={goToFeedPage} button1={"Login"} onClick1={goToLoginPage} button2={"Signup"} onClick2={goToSignupPage} button3={"Voltar"} onClick3={goToFeedPage} value={feed} onChange={this.handleFieldChange}/>
+                <Header onClick={goToFeedPage} button1={"Voltar"} onClick1={goToFeedPage} button2={"Login"} onClick2={goToLoginPage} button3={"Signup"} onClick3={goToSignupPage} value={feed} onChange={this.handleFieldChange}/>
         )
         }
 

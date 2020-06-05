@@ -12,12 +12,17 @@ export const ScrollToTopContainer = styled.div `
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 0 5px;
+    transition: all 0.5s;
     @media (max-width: 700px){
         bottom: 5px;
         right: 5px;
+        box-shadow: 0 0 10px;
     }
 `
 export const StyledExpandLessIcon = styled(ExpandLessIcon)`
+    color: black;
+    transition: color 0.5s;
     :hover{
         cursor: pointer;
         color: gray;

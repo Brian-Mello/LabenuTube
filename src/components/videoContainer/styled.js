@@ -11,8 +11,10 @@ export const StyledContainer = styled.div `
     display: flex;
     flex-direction: column;
     font-family: 'Manrope', sans-serif;
+    transition: background-color 0.5s;
     :hover {
         cursor: pointer;
+        background-color: #e5e2e2;
     }
 `
 

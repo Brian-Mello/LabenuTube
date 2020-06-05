@@ -1,4 +1,4 @@
-import React, {Fragment} from "react";
+import React from "react";
 import { push } from "connected-react-router";
 import { routes } from '../Router/index';
 import { connect } from "react-redux";
@@ -28,7 +28,7 @@ class HomePage extends React.Component {
 
   handleLogout = () => {
     localStorage.removeItem("accessToken")
-    window.alert("Usuário deslogado com sucesso!")
+
     this.props.goToFeedPage()
   }
 
@@ -47,10 +47,6 @@ class HomePage extends React.Component {
       top: 0,
       behavior: 'auto'
     });
-  };
-
-  handleDeleteVideo = (videoId) => {
-    this.props.deleteVideo(videoId)
   };
 
   handleSelectOrderOnChange = event => {
@@ -79,10 +75,10 @@ class HomePage extends React.Component {
     let buttonRenderization
 
     if(isLogged){
-      menuItems = <Fragment>
+      menuItems = <>
         <StyledP onClick={goToProfilePage}>Profile</StyledP>
         <StyledP onClick={goToCreateVideoPage}>Create Video</StyledP>
-      </Fragment>
+      </>
     }
 
     if(isLogged){
@@ -123,7 +119,6 @@ class HomePage extends React.Component {
           img={video.photo}
           videoTitle={video.title}
           username={video.name}
-          onDelete={() => this.handleDeleteVideo(video.id)}
           onClick={() => this.handleSetVideoId(video.id)}
           defaultValue="https://i.pinimg.com/originals/4a/19/4e/4a194eec519841ce2815141db087b7ac.jpg"
         />
